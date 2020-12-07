@@ -7,3 +7,7 @@
     letter-spacing: .2rem;
     font-size: 20pt;
 }
+
+a {
+    cursor: pointer;
+}
