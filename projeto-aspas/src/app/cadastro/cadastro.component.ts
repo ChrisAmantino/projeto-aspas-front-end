@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UsuarioModel } from '../model/UsuarioModel';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,9 +10,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  user: UsuarioModel = new UsuarioModel () 
+  senha!: string;
 
-  ngOnInit(): void {
+  constructor(
+
+    private authService: AuthService,
+    private router: Router,
+
+  ) { }
+
+  ngOnInit() {
   }
+
+  conferirSenha (event:any) {
+    this.senha = event.target.value
+  }
+
+  cadastrar() {
+
+    if (this.senha === this.user.senhaUsuario) {
+      this.authService.cadastrar(this.user).subscribe((resp:UsuarioModel) => {
+        this.user = resp
+        alert('Usuário cadastro com sucesso!')
+        this.router.navigate(['/login'])
+        
+      })
+
+    } else {
+
+      alert('Suas senhas não conferem.')
+
+    }
+
+}
 
 }
