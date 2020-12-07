@@ -9,7 +9,8 @@ const routes: Routes = [
 {path: 'login', component:LoginComponent},
 {path: 'cadastro', component:CadastroComponent},
 {path: 'feed', component:FeedComponent},
-{path: 'home',component:HomeComponent}
+{path: 'home',component:HomeComponent},
+{path: '', redirectTo:'home',pathMatch:'full'}
 ];
 
 @NgModule({
