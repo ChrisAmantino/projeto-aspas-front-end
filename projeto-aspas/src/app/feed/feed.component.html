@@ -110,7 +110,12 @@
 
                                 <div class="card-body">
                                     <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
-                                    <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem">
+                                    
+                                        <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem">
+                                                                        
+                                    <div *ngIf='imgNula()'>
+                                      <p>{{item.imagem}}</p>  
+                                    </div>
                                     <div>{{item.video}}</div>
                                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                                         Postado em {{item.dataPostagem | date: 'dd/MM/yyyy'}} às {{item.dataPostagem | date: 'HH:mm'}}
