@@ -16,6 +16,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { NavbarHomeComponent } from './navbar-home/navbar-home.component';
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './feed/feed.component';
+import { PostTemaComponent } from './post-tema/post-tema.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FeedComponent } from './feed/feed.component';
     CadastroComponent,
     NavbarHomeComponent,
     HomeComponent,
-    FeedComponent
+    FeedComponent,
+    PostTemaComponent
   ],
   imports: [
     BrowserModule,
