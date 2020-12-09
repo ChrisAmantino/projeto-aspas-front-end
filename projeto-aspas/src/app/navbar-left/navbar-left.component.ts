@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioModel } from '../model/UsuarioModel';
+import { UsuarioService } from '../service/usuario.service';
 
 @Component({
   selector: 'app-navbar-left',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar-left.component.css']
 })
 export class NavbarLeftComponent implements OnInit {
+  usuario: UsuarioModel = new UsuarioModel();
+  idUsuario!: number
 
-  constructor() { }
+  constructor(
+    private usuarioService: UsuarioService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  findByIdUsuario() {
+    this.usuarioService.getNomeById(this.idUsuario).subscribe((resp: UsuarioModel) =>{
+      this.usuario = resp;
+    })
   }
 
 }
