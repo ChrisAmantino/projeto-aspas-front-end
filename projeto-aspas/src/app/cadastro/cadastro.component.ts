@@ -28,7 +28,7 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrar() {
-
+    if (this.user.tipoUsuario == 'ALUNO' || this.user.tipoUsuario == 'TUTOR') {
     if (this.senha === this.user.senhaUsuario) {
       this.authService.cadastrar(this.user).subscribe((resp:UsuarioModel) => {
         this.user = resp
@@ -42,5 +42,8 @@ export class CadastroComponent implements OnInit {
       alert('Suas senhas não conferem.')
 
     }
+  } else {
+    alert ("Tipo de usuário inválido! Digite em letras maiúsculas 'ALUNO' ou 'TUTOR'")
+  }
 }
 }

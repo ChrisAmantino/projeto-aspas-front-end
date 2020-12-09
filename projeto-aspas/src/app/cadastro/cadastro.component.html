@@ -18,7 +18,7 @@
             
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nome completo</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
                         placeholder="Digite seu nome completo" [(ngModel)]='user.nomeCompleto'>
 
                 </div>
@@ -32,11 +32,8 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Eu sou...</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Estudante</option>
-                        <option>Tutor</option>
-                        <option>Instituição de ensino</option>
-                    </select>
+                    <input type="text" class="form-control" id="tipo" aria-describedby="emailHelp"
+                    [(ngModel)]='user.tipoUsuario'>
                 </div>
 
                 <div class="row">
