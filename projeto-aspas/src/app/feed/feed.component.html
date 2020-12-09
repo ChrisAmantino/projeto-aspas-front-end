@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
-            <h1>navbar-left</h1>
+            <app-navbar-left></app-navbar-left>
         </div>
         <div class="col-md-6">
             <div class="card w-100 d-flex justify-content-center" style="width: 18rem;">
@@ -10,26 +10,26 @@
                     <p class="card-text text-monospace">Aqui você pode publicar fotos, vídeos e textos!</p>
                     <div class="form-group">
                         <label class="text-monospace" for="titulo">Título:</label>
-                        <input type="text" class="form-control" id="título" placeholder="Digite aqui o seu título">
+                        <input type="text" class="form-control" id="título" placeholder="Digite aqui o seu título" [(ngModel)]='postagem.titulo'>
                     </div>
                     <div class="form-group">
                         <label class="text-monospace" for="texto">Texto:</label>
                         <textarea class="form-control" id="texto" rows="3"
-                            placeholder="Digite aqui o seu texto" ></textarea>
+                            placeholder="Digite aqui o seu texto" [(ngModel)]='postagem.descricao'></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="text-monospace" for="imagem">Imagem:</label>
                                 <input type="text" class="form-control" id="imagem"
-                                    placeholder="Copie e cole o link da imagem aqui!">
+                                    placeholder="Copie e cole o link da imagem aqui!" [(ngModel)]='postagem.imagem'>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="text-monospace" for="video">Vídeo:</label>
                                 <input type="text" class="form-control" id="video"
-                                    placeholder="Copie e cole o link do video aqui!">
+                                    placeholder="Copie e cole o link do video aqui!"[(ngModel)]='postagem.video'>
                             </div>
                         </div>
                     </div>
@@ -37,16 +37,16 @@
                         <div class="col-md-8">
                             <div class="form-group m-0">
                                 <label class="text-monospace" for="tema">Escolha um tema ou <a
-                                        routerLink="/cadastro-tema">Cadaste um novo</a></label>
-                                <select name="tema" id="tema" class="form-control">
-                                    <option>
-                                        Teste123
+                                        routerLink="/cadastro-tema">Cadastre um novo</a></label>
+                                <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema'>
+                                    <option *ngFor='let item of listaTemas' value='{{item.idTema}}'>
+                                        {{item.materia}} - {{item.serie}}
                                     </option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <button type="button" class="btn btn-outline-success w-100">Publicar</button>
+                            <button type="button" class="btn btn-outline-success w-100" (click)='publicar()'>Publicar</button>
                         </div>
                     </div>
                 </div>
@@ -83,17 +83,17 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card mt-5" *ngFor='let item of listaPostagens'>
+                            <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h6 class="text-monospace">{{item.usuario.nomeCompleto}} </h6>
+                                            <h6 class="text-monospace">{{item.usuario}} </h6>
                                         </div>
                                     </div>
                                     <div class="row d-flex align-items-center">
                                         <div class="col-md-8">
                                             <h5 class="card-title">{{item.titulo}}</h5>
-                                            <small>Tema: {{item.tema.materia}} Ano: {{item.tema.serie}}</small>
+                                            <small>Tema: {{item.tema.materia}} - Ano: {{item.tema.serie}}</small>
                                         </div>
                                         <div class="col-md-4 d-flex justify-content-end">
                                             <button class="mr-3 btn btn-outline-info">
@@ -109,9 +109,9 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <p class="card-text" aria-describedby="texto">Olá</p>
+                                    <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
                                     <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem">
-                                    <div><p>{{item.video}}</p></div>
+                                    <div>{{item.video}}</div>
                                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                                         Postado em {{item.dataPostagem | date: 'dd/MM/yyyy'}} às {{item.dataPostagem | date: 'HH:mm'}}
                                     </small>
