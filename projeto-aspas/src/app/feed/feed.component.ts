@@ -70,20 +70,12 @@ export class FeedComponent implements OnInit {
     }
   }
 
-  verificaImg(){
-    let ok = false
-    if(this.postagem.imagem != null){
-      ok = true
-    }
-    return ok
+  contemImg(postagem: PostagemModel){
+   return (postagem.imagem != null) 
   }
 
-  imgNula(){
-    let ok = false
-    if(this.postagem.imagem == null){
-      ok = true
-    }
-    return ok
+  contemVideo(postagem: PostagemModel){
+    return (postagem.video != null)
   }
 
 
