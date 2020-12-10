@@ -116,8 +116,10 @@
                                     <div *ngIf='contemImg(item)'>
                                         <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem">
                                     </div>
-                                    <div>
-                                            {{item.video}}
+                                    <div *ngIf='contemVideo(item)'>
+                                        <iframe width="560" height="315" src="{{item.video}}" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
                                     </div>
                                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                                         Postado em {{item.dataPostagem | date: 'dd/MM/yyyy'}} às

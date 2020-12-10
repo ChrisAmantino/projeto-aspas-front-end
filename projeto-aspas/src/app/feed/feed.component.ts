@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Sanitizer } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { PostagemModel } from '../model/PostagemModel';
 import { TemaModel } from '../model/TemaModel';
 import { UsuarioModel } from '../model/UsuarioModel';
@@ -25,7 +26,8 @@ export class FeedComponent implements OnInit {
 
   constructor(
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(){
@@ -79,6 +81,9 @@ export class FeedComponent implements OnInit {
   }
 
 
-  }
+
+  
+
+}
 
   

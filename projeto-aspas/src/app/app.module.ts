@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,7 @@ import { PostTemaComponent } from './post-tema/post-tema.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
