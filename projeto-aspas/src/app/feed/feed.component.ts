@@ -41,7 +41,7 @@ export class FeedComponent implements OnInit {
       this.listaPostagens = resp;
       this.listaPostagens.forEach(postagem => {
             if(postagem.video != null){
-            this.postagem.urlSegura = this.sanitizer.bypassSecurityTrustResourceUrl(this.postagem.video)
+            postagem.urlSegura = this.sanitizer.bypassSecurityTrustResourceUrl(postagem.video)
           }
         }
       )
