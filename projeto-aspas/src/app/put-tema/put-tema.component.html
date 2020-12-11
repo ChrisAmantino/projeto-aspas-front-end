@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+          <h1> Perfil lateral </h1>
+        </div>
+        <div class="col-md-8">
+  
+            <div>
+                <div class="form-group">
+                  <label class="text-monospace" for="titulo">Matéria:</label>
+                  <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo" [(ngModel)]="tema.materia">
+                </div>
+
+                <div class="form-group">
+                  <label class="text-monospace" for="titulo">Ano Escolar: </label>
+                  <input type="text" class="form-control" id="texto" placeholder="Digite aqui o Ano Escolar referente à matéria que você está cadastrando" [(ngModel)]="tema.serie">
+                </div>
+  
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                </div>
+            </div>
+  
+        </div>
+  
+    </div>
+  </div>

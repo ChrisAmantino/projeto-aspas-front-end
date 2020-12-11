@@ -1,0 +1,58 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+          <app-navbar-left></app-navbar-left>
+        </div>
+        <div class="col-md-8">
+  
+            <div>
+                <div class="form-group">
+                  <label for="titulo">Título da postagem</label>
+                  <input type="text" class="form-control" id="titulo" aria-describedby="emailHelp" placeholder="Digite aqui o seu titulo" [(ngModel)]="postagem.titulo">
+                </div>
+  
+                <div class="form-group">
+                    <label for="texto">Texto da postagem</label>
+                    <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto" [(ngModel)]="postagem.descricao"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="text-monospace" for="imagem">Imagem:</label>
+                            <input type="text" class="form-control" id="imagem"
+                                placeholder="Copie e cole o link da imagem aqui!" [(ngModel)]='postagem.imagem'>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="text-monospace" for="video">Vídeo:</label>
+                            <input type="text" class="form-control" id="video"
+                                placeholder="Copie e cole o link do video aqui!" [(ngModel)]='postagem.video'>
+                        </div>
+                    </div>
+                </div>
+
+  
+                <div class="form-group m-0">
+                  <label class="text-monospace" for="tema">Escolha um tema ou <a
+                    routerLink="/cadastro-tema">Cadastre um novo</a></label>
+            <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
+                (change)='findByIdTema()'>
+                <option *ngFor='let item of listaTemas' value={{item.idTema}}>
+                    {{item.materia}} - {{item.serie}}
+                    
+                </option>
+            </select>
+                </div>
+  
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                </div>
+            </div>
+  
+        </div>
+  
+    </div>
+  </div>
