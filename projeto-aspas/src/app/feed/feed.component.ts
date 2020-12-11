@@ -39,6 +39,12 @@ export class FeedComponent implements OnInit {
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: PostagemModel[]) =>{
       this.listaPostagens = resp;
+      this.listaPostagens.forEach(postagem => {
+            if(postagem.video != null){
+            postagem.urlSegura = this.sanitizer.bypassSecurityTrustResourceUrl(postagem.video)
+          }
+        }
+      )
     })
   }
 
@@ -77,8 +83,10 @@ export class FeedComponent implements OnInit {
   }
 
   contemVideo(postagem: PostagemModel){
-    return (postagem.video != null)
-  }
+    return (postagem.video != null) 
+   }
+
+
 
 
 
