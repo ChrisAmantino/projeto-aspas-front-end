@@ -37,8 +37,8 @@
                     <div class="row d-flex align-items-end">
                         <div class="col-md-8">
                             <div class="form-group m-0">
-                                <label class="text-monospace" for="tema">Escolha um tema ou <a
-                                        routerLink="/cadastro-tema">Cadastre um novo</a></label>
+                                <label class="text-monospace" for="tema">Escolha a matéria ou <a
+                                        routerLink="/cadastro-tema">Cadastre uma nova</a></label>
                                 <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
                                     (change)='findByIdTema'>
                                     <option *ngFor='let item of listaTemas' value='{{item.idTema}}'>
@@ -99,11 +99,11 @@
                                             <small>Tema: {{item.tema.materia}} - Ano: {{item.tema.serie}}</small>
                                         </div>
                                         <div class="col-md-4 d-flex justify-content-end">
-                                            <button class="mr-3 btn btn-outline-info">
+                                            <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.idPostagem]">
                                                 Editar
                                             </button>
 
-                                            <button class="btn btn-outline-danger ml-3">
+                                            <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.idPostagem]">
                                                 Apagar
                                             </button>
 

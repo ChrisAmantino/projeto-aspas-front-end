@@ -1,0 +1,53 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+            Lateral
+        </div>
+        <div class="col-md-8">
+            <div class="card mt-5">
+
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6 class="text-monospace">{{postagem.usuario}} </h6>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-8">
+                            <h5 class="card-title">{{postagem.titulo}}</h5>
+                            <small>Tema: {{postagem.tema.materia}} - Ano: {{postagem.tema.serie}}</small>
+                        </div>
+                     
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text" aria-describedby="texto">{{postagem.descricao}}</p>
+                    <div *ngIf='contemImg(postagem)'>
+                        <img src="{{postagem.imagem}}" class="card-img" alt="imagem da postagem"
+                            onerror="event.target.style.display='none'">
+                    </div>
+                    <div *ngIf='contemVideo(postagem)'>
+                        <iframe width="560" height="315" [src]="postagem.urlSegura" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                        Postado em {{postagem.dataPostagem | date: 'dd/MM/yyyy'}} às
+                        {{postagem.dataPostagem | date: 'HH:mm'}}
+                    </small>
+                </div>
+
+            </div>
+
+            <hr class="mt-4 mb-4">
+
+            <h5 class="text-center">Tem certeza que deseja apagar essa postagem?</h5>
+            <div class="d-flex justify-content-center mt-5">
+                <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
+                <button class="btn btn-outline-danger" (click)="btnNao()">Não</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,10 @@ import { NavbarHomeComponent } from './navbar-home/navbar-home.component';
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { PostTemaComponent } from './post-tema/post-tema.component';
     NavbarHomeComponent,
     HomeComponent,
     FeedComponent,
-    PostTemaComponent
+    PostTemaComponent,
+    PutTemaComponent,
+    PutPostagemComponent,
+    DeletePostagemComponent,
+    DeleteTemaComponent
   ],
   imports: [
     BrowserModule,

@@ -26,5 +26,11 @@ export class TemaService {
       return this.http.post<TemaModel>('http://localhost:8081/tema', tema, this.token)
     }
 
+    putTema(tema: TemaModel): Observable<TemaModel> {
+      return this.http.put<TemaModel>('http://localhost:8081/tema', tema, this.token)
+    }
 
+    deleteTema(id: number): Observable<TemaModel> {
+      return this.http.delete<TemaModel>(`http://localhost:8081/tema/${id}`, this.token)
+     }
 }
