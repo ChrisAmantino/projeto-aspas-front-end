@@ -1,4 +1,7 @@
 .icone {
     letter-spacing: .2rem;
-    font-size: 10pt;
+    font-size: 12pt;
+}
+.navbar-left-color {
+    background-color: #AAE9FF;
 }
