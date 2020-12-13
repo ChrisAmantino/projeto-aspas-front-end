@@ -28,3 +28,11 @@ color: #0072b1;
 .faInstagram:hover{
 color: #C13584;
 }
+
+.bg-footer-up {
+  background-color: #76B1ED ;
+}
+
+.bg-footer-down {
+  background-color: #40718F;
+}
