@@ -1,24 +1,30 @@
-<div class="container">
+<div class="container-fluid">
 
-    <div class="row mt-5 mb-5">
-        <div class="col-md-4">
-          ARTE
-        </div>
-        <div class="col-md-8">
+    <div class="row mt-5 mb-5 d-flex justify-content-center align-items-center">
+
+        <div class="col-md-7 d-flex justify-content-center">
+          <div class="card card-color borda w-50 d-flex justify-content-center shadow mt-5" style="width: 18rem;">
+            <div class="card-body">
           <div class="card mt-5">
   
              <div class="card-body" >
-               <p class="card-text" aria-describedby="texto">{{tema.materia}} </p>
+               <p class="card-text text-center text-monospace" aria-describedby="texto">{{tema.materia}} - {{tema.serie}} </p>
              </div>
           </div>
   
           <hr class="mt-4 mb-4">
   
-          <h5 class="text-center">Tem certeza que deseja apagar esse Tema?</h5>
+          <h5 class="text-center text-monospace text-light">Tem certeza que deseja apagar essa Matéria?</h5>
           <div class="d-flex justify-content-center mt-5">
-             <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
-             <button class="btn btn-outline-danger" (click)="btnNao()" >Não</button>
+             <button class="btn btn-success mr-3" (click)="btnSim()">Sim</button>
+             <button class="btn btn-danger" (click)="btnNao()" >Não</button>
           </div>
         </div>
     </div>
   </div>
+  <div class="col-md-4 mt-5">
+    <img src="../../assets/img/mascote.png" alt="">
+  </div>
+
+</div>
+</div>
