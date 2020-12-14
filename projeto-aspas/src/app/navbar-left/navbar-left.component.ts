@@ -10,7 +10,6 @@ import { UsuarioService } from '../service/usuario.service';
 
 export class NavbarLeftComponent implements OnInit {
 
-
   constructor(
    
   ) { }
