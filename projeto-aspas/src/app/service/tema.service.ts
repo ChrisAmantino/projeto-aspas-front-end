@@ -33,4 +33,7 @@ export class TemaService {
     deleteTema(id: number): Observable<TemaModel> {
       return this.http.delete<TemaModel>(`http://localhost:8081/tema/${id}`, this.token)
      }
+     getByNomeTema(nome: string): Observable<TemaModel[]> {
+      return this.http.get<TemaModel[]>(`http://localhost:8081/tema/materia/${nome}`, this.token)
+    }
 }

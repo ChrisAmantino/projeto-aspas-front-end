@@ -1,19 +1,16 @@
+<nav style="height: 60px;" class="navbar  container-fluid d-flex justify-content-center navbar-expand-lg navbar-light bg-light sticky-top">
 
+  <nav class="navbar navbar-light justify-content-start">
+    <a class="navbar-brand text-monospace texto-logo" href="#">
+      <img src="https://i.imgur.com/FFEwm74.jpg" class="d-inline-block align-top" alt="" loading="lazy">
+    </a>
+  </nav>
 
-  <nav class="navbar container-fluid d-flex justify-content-center navbar-expand-lg navbar-light bg-light sticky-top">
-
-    <nav class="navbar navbar-light justify-content-start">
-      <a class="navbar-brand text-monospace texto-logo" href="#">
-        <img src="https://i.imgur.com/FFEwm74.jpg" class="d-inline-block align-top"
-          alt="" loading="lazy">
-      </a>
-    </nav>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-<div class="justify-content-center">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="justify-content-center">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
@@ -26,11 +23,11 @@
 
         <div *ngIf='auth.btnSair()'>
 
-        <li class="nav-item">
-          <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/feed'>Feed</a>
-        </li>
-      </div>
-        
+          <li class="nav-item">
+            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/feed'>Feed</a>
+          </li>
+        </div>
+
         <div *ngIf='auth.btnLogin()'>
 
           <li class="nav-item">
@@ -63,6 +60,5 @@
       </ul>
 
     </div>
-    </div>
-  </nav>
-
+  </div>
+</nav>
