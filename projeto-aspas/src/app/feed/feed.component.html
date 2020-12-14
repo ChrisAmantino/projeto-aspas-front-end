@@ -1,34 +1,39 @@
 <div class="container-fluid">
     <div class="row">
+<<<<<<< HEAD
         <div class="col-md-3">
+=======
+        <div class="col-md-3 w-100">
+>>>>>>> 48c8cac387ed8bbc8a553d2879091ebf02014ac2
             <app-navbar-left></app-navbar-left>
         </div>
-        <div class="col-md-6">
-            <div class="card w-100 d-flex justify-content-center" style="width: 18rem;">
+        <div class="col-md-7">
+            <div class="card card-color borda w-100 d-flex justify-content-center" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title text-monospace">Compartilhe seu conhecimento ou conquista com todos!</h5>
-                    <p class="card-text text-monospace">Aqui você pode publicar fotos, vídeos e textos!</p>
+                    <h5 class="card-title text-monospace text-light">Compartilhe seu conhecimento ou conquista com
+                        todos!</h5>
+                    <p class="card-text text-monospace text-light">Aqui você pode publicar fotos, vídeos e textos!</p>
                     <div class="form-group">
-                        <label class="text-monospace" for="titulo">Título:</label>
+                        <label class="text-monospace text-light" for="titulo">Título:</label>
                         <input type="text" class="form-control" id="título" placeholder="Digite aqui o seu título"
                             [(ngModel)]='postagem.titulo'>
                     </div>
                     <div class="form-group">
-                        <label class="text-monospace" for="texto">Texto:</label>
+                        <label class="text-monospace text-light" for="texto">Texto:</label>
                         <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
                             [(ngModel)]='postagem.descricao'></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="text-monospace" for="imagem">Imagem:</label>
+                                <label class="text-monospace text-light" for="imagem">Imagem:</label>
                                 <input type="text" class="form-control" id="imagem"
                                     placeholder="Copie e cole o link da imagem aqui!" [(ngModel)]='postagem.imagem'>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="text-monospace" for="video">Vídeo:</label>
+                                <label class="text-monospace text-light" for="video">Vídeo:</label>
                                 <input type="text" class="form-control" id="video"
                                     placeholder="Copie e cole o link do video aqui!" [(ngModel)]='postagem.video'>
                             </div>
@@ -37,8 +42,9 @@
                     <div class="row d-flex align-items-end">
                         <div class="col-md-8">
                             <div class="form-group m-0">
-                                <label class="text-monospace" for="tema">Escolha a matéria ou <a
-                                        routerLink="/cadastro-tema">Cadastre uma nova</a></label>
+                                <label class="text-monospace text-light" for="tema">Escolha a matéria ou <a
+                                        routerLink="/cadastro-tema" class="text-light text-monospace">Cadastre uma
+                                        nova</a></label>
                                 <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
                                     (change)='findByIdTema'>
                                     <option *ngFor='let item of listaTemas' value='{{item.idTema}}'>
@@ -48,7 +54,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <button type="button" class="btn btn-outline-success w-100"
+                            <button type="button" class="btn btn-outline-light w-100"
                                 (click)='publicar()'>Publicar</button>
                         </div>
                     </div>
@@ -86,24 +92,28 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-                                <div class="card-header">
+                            <div class="card mt-5 rouned border-dark"
+                                *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                                <div class="card-header card-color">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h6 class="text-monospace">{{item.usuario}} </h6>
+                                            <h6 class="text-monospace text-light">{{item.usuario}} </h6>
                                         </div>
                                     </div>
                                     <div class="row d-flex align-items-center">
                                         <div class="col-md-8">
-                                            <h5 class="card-title">{{item.titulo}}</h5>
-                                            <small>Tema: {{item.tema.materia}} - Ano: {{item.tema.serie}}</small>
+                                            <h5 class="card-title text-monospace text-light">{{item.titulo}}</h5>
+                                            <small class="text-monospace text-light">Tema: {{item.tema.materia}} - Ano:
+                                                {{item.tema.serie}}</small>
                                         </div>
                                         <div class="col-md-4 d-flex justify-content-end">
-                                            <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.idPostagem]">
+                                            <button class="mr-3 btn btn-info text-monospace"
+                                                [routerLink]="['/editar-post', item.idPostagem]">
                                                 Editar
                                             </button>
 
-                                            <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.idPostagem]">
+                                            <button class="btn btn-danger ml-3 text-monospace"
+                                                [routerLink]="['/delete-post', item.idPostagem]">
                                                 Apagar
                                             </button>
 
@@ -112,16 +122,19 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
+                                    <p class="card-text text-monospace" aria-describedby="texto">{{item.descricao}}</p>
                                     <div *ngIf='contemImg(item)'>
-                                        <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem" onerror="event.target.style.display='none'">
+                                        <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem"
+                                            onerror="event.target.style.display='none'">
                                     </div>
                                     <div *ngIf='contemVideo(item)'>
-                                        <iframe width="560" height="315" [src]="item.urlSegura" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
+                                        
+                                            <iframe width="560" height="315" [src]="item.urlSegura" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        
                                     </div>
-                                    <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                                    <small id="texto" class="form-text m-0 mb-3 text-monospace text-muted">
                                         Postado em {{item.dataPostagem | date: 'dd/MM/yyyy'}} às
                                         {{item.dataPostagem | date: 'HH:mm'}}
                                     </small>
@@ -149,5 +162,8 @@
             </div>
 
         </div>
+  
 
     </div>
+
+    

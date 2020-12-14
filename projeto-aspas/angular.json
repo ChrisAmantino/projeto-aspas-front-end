@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "projeto-aspas"
+  "defaultProject": "projeto-aspas",
+  "cli": {
+    "analytics": "e076e9a3-df5e-4b79-a03a-1d012b66c8f5"
+  }
 }

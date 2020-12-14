@@ -1,0 +1,11 @@
+.card-color {
+    background-color: #8A2BE2;
+}
+.shadow{
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(34, 33, 33, 0.5));
+    filter: drop-shadow(15px 10px 5px rgba(34, 33, 33, 0.5));
+}
+
+.borda {
+    border-radius: 25px;
+}

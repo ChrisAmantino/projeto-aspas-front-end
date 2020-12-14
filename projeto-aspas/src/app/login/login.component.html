@@ -1,39 +1,31 @@
 <div class="container">
 
-    <div class="row w-100">
+    <div class="row w-100 d-flex align-items-center">
         <div class="col-md-4">
-            <h1> Lateral esquerda </h1>
+            <img src="https://www.flaticon.com/svg/static/icons/svg/709/709262.svg" width="230" height="230" alt="">
         </div>
 
         <div class="col-md-8">
 
-            <div class="row d-flex justify-content-center">
-
-                <img class="card-img-top rounded-circle w-25"
-                    src="https://www.quartinhos.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/a/papel_de_parede_floral_aquarela_fb.jpg"
-                    alt="Imagem de capa do card">
-
-            </div>
-         
-                <div class="form-group">
-                    <label for="exampleInputEmail1">E-mail</label>
+            <div class="card borda border-dark shadow w-75 mt-3 card-color" style="width: 18rem;">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/2000/2000860.svg" width="75" height="75"
+                  class="card-img-top mt-4" alt="...">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1" class="text-light text-monospace">E-mail</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="exemplo@exemplo.com" [(ngModel)]='userLogin.emailUsuario'>
-                    <small id="emailHelp" class="form-text text-muted">Coloque seu e-mail preferido.</small>
+                      placeholder="exemplo@email.com" [(ngModel)]='userLogin.emailUsuario'>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-light text-monospace">Senha</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha aqui."
+                      [(ngModel)]='userLogin.senhaUsuario'>
+                  </div>
+                  <div class="row d-flex justify-content-center">
+                    <button ctype="submit" class="btn btn-outline-light mt-3 text-monospace" (click)='entrar()'>Iniciar sessão</button>
+                  </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]='userLogin.senhaUsuario'>
-                </div>
-
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Mantenha-me conectado. </label>
-                </div>
-                <div class="botao d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary mb-5" (click)='entrar()'>Embarque na nave Aspas</button>
-                </div>
+              </div>
 
         </div>
     </div>

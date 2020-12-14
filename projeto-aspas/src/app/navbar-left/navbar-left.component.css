@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 .texto {
     letter-spacing: .2rem;
     font-size: 16pt;
 }
 
+=======
+.icone {
+    letter-spacing: .2rem;
+    font-size: 12pt;
+}
+.navbar-left-color {
+    background-color: #AAE9FF;
+}
+>>>>>>> 48c8cac387ed8bbc8a553d2879091ebf02014ac2
