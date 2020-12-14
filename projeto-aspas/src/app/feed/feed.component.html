@@ -6,7 +6,8 @@
         <div class="col-md-7">
             <div class="card card-color borda w-100 d-flex justify-content-center" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title text-monospace text-light">Compartilhe seu conhecimento ou conquista com todos!</h5>
+                    <h5 class="card-title text-monospace text-light">Compartilhe seu conhecimento ou conquista com
+                        todos!</h5>
                     <p class="card-text text-monospace text-light">Aqui você pode publicar fotos, vídeos e textos!</p>
                     <div class="form-group">
                         <label class="text-monospace text-light" for="titulo">Título:</label>
@@ -38,7 +39,8 @@
                         <div class="col-md-8">
                             <div class="form-group m-0">
                                 <label class="text-monospace text-light" for="tema">Escolha a matéria ou <a
-                                        routerLink="/cadastro-tema" class="text-light text-monospace">Cadastre uma nova</a></label>
+                                        routerLink="/cadastro-tema" class="text-light text-monospace">Cadastre uma
+                                        nova</a></label>
                                 <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
                                     (change)='findByIdTema'>
                                     <option *ngFor='let item of listaTemas' value='{{item.idTema}}'>
@@ -86,7 +88,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card mt-5 rouned border-dark" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                            <div class="card mt-5 rouned border-dark"
+                                *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                 <div class="card-header card-color">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -96,14 +99,17 @@
                                     <div class="row d-flex align-items-center">
                                         <div class="col-md-8">
                                             <h5 class="card-title text-monospace text-light">{{item.titulo}}</h5>
-                                            <small class="text-monospace text-light">Tema: {{item.tema.materia}} - Ano: {{item.tema.serie}}</small>
+                                            <small class="text-monospace text-light">Tema: {{item.tema.materia}} - Ano:
+                                                {{item.tema.serie}}</small>
                                         </div>
                                         <div class="col-md-4 d-flex justify-content-end">
-                                            <button class="mr-3 btn btn-info text-monospace" [routerLink]="['/editar-post', item.idPostagem]">
+                                            <button class="mr-3 btn btn-info text-monospace"
+                                                [routerLink]="['/editar-post', item.idPostagem]">
                                                 Editar
                                             </button>
 
-                                            <button class="btn btn-danger ml-3 text-monospace" [routerLink]="['/delete-post', item.idPostagem]">
+                                            <button class="btn btn-danger ml-3 text-monospace"
+                                                [routerLink]="['/delete-post', item.idPostagem]">
                                                 Apagar
                                             </button>
 
@@ -114,12 +120,15 @@
                                 <div class="card-body">
                                     <p class="card-text text-monospace" aria-describedby="texto">{{item.descricao}}</p>
                                     <div *ngIf='contemImg(item)'>
-                                        <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem" onerror="event.target.style.display='none'">
+                                        <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem"
+                                            onerror="event.target.style.display='none'">
                                     </div>
                                     <div *ngIf='contemVideo(item)'>
-                                        <iframe width="560" height="315" [src]="item.urlSegura" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
+                                        
+                                            <iframe width="560" height="315" [src]="item.urlSegura" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        
                                     </div>
                                     <small id="texto" class="form-text m-0 mb-3 text-monospace text-muted">
                                         Postado em {{item.dataPostagem | date: 'dd/MM/yyyy'}} às
@@ -149,5 +158,8 @@
             </div>
 
         </div>
+  
 
     </div>
+
+    
