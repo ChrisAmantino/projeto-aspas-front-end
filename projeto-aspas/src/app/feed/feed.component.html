@@ -168,25 +168,15 @@
                                                 <h6 class="text-monospace text-light">{{post.usuario}} </h6>
                                             </div>
                                         </div>
+                                    
                                         <div class="row d-flex align-items-center">
                                             <div class="col-md-8">
                                                 <h5 class="card-title text-monospace text-light">{{post.titulo}}</h5>
-                                                <small class="text-monospace text-light">Matéria: {{post.tema.materia}}
-                                                    - Ano:
-                                                    {{post.tema.serie}}</small>
+                                                <!-- <small class="text-monospace text-light">Matéria: {{post.tema.materia}} -->
+                                                    <!-- - Ano: -->
+                                                    <!-- {{post.tema.serie}}</small> -->
                                             </div>
-                                            <div class="col-md-4 d-flex justify-content-end">
-                                                <button class="mr-3 btn btn-info text-monospace"
-                                                    [routerLink]="['/editar-post', item.idPostagem]">
-                                                    Editar
-                                                </button>
-
-                                                <button class="btn btn-danger ml-3 text-monospace"
-                                                    [routerLink]="['/delete-post', item.idPostagem]">
-                                                    Apagar
-                                                </button>
-
-                                            </div>
+                                           
                                         </div>
                                     </div>
 
