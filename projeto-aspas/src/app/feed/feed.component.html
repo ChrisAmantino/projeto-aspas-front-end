@@ -1,6 +1,8 @@
 <div class="container-fluid">
     <div class="row">
+
         <div class="col-md-3 w-100">
+
             <app-navbar-left></app-navbar-left>
         </div>
         <div class="col-md-7">
@@ -89,7 +91,7 @@
                     <!--Card da postagem-->
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card mt-5 rouned border-dark"
+                            <div class="card mt-5 rounded border-dark"
                                 *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                 <div class="card-header card-color">
                                     <div class="row">
@@ -163,6 +165,7 @@
                                                 <h6 class="text-monospace text-light">{{post.usuario}} </h6>
                                             </div>
                                         </div>
+                                    
                                         <div class="row d-flex align-items-center">
                                             <div class="col-md-8">
                                                 <h5 class="card-title text-monospace text-light">{{post.titulo}}</h5>
@@ -181,6 +184,7 @@
                                                 </button>
     
                                             </div>
+                                           
                                         </div>
                                     </div>
     
@@ -210,14 +214,9 @@
                     </div>
                 </div>
 
-
-
-
             </div>
 
         </div>
   
 
     </div>
-
-    
