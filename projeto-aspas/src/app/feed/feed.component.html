@@ -150,7 +150,7 @@
                                 aria-label="Pesquisar" [(ngModel)]='nomeTema'>
                         </div>
                         <div class="col-md-2 pl-0">
-                            <button class="btn btn-outline-warning w-100" type="button" (click)='findByNomeTema'>Pesquisar</button>
+                            <button class="btn btn-outline-warning w-100" type="button" (click)='findByNomeTema()'>Pesquisar</button>
                         </div>
                     </div>
                     <div class="row">
@@ -190,7 +190,7 @@
     
                                     <div class="card-body">
                                         <p class="card-text text-monospace" aria-describedby="texto">{{post.descricao}}</p>
-                                        <div *ngIf='contemImg(item)'>
+                                        <div *ngIf='contemImg(post)'>
                                             <img src="{{post.imagem}}" class="card-img" alt="imagem da postagem"
                                                 onerror="event.target.style.display='none'">
                                         </div>
