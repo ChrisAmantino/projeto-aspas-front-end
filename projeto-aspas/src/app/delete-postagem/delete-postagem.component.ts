@@ -2,6 +2,7 @@ import { Component, OnInit, Sanitizer } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostagemModel } from '../model/PostagemModel';
+import { AlertasService } from '../service/alertas.service';
 import { PostagemService } from '../service/postagem.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class DeletePostagemComponent implements OnInit {
     private postagemService: PostagemService,
     private router: Router,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -43,7 +45,7 @@ export class DeletePostagemComponent implements OnInit {
   btnSim(){
     this.postagemService.deletePostagem(this.postagem.idPostagem).subscribe(()=> {
       this.router.navigate(['/feed'])
-      alert('Postagem apagada com sucesso!')
+      this.alert.showAlertSuccess('Postagem apagada com sucesso!')
     })
   }
 
