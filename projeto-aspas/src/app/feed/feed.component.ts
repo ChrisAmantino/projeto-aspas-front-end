@@ -23,6 +23,7 @@ export class FeedComponent implements OnInit {
   tema: TemaModel = new TemaModel();
   listaTemas!: TemaModel[];
   idTema!: number;
+  nomeTema!: string;
 
   constructor(
     private postagemService: PostagemService,
@@ -95,5 +96,15 @@ export class FeedComponent implements OnInit {
   contemVideo(postagem: PostagemModel){
     return (postagem.video != null) 
    }
+
+   findByNomeTema() {
+    if (this.nomeTema === ''){
+      this.findAllTemas()
+    } else {
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: TemaModel[]) => {
+        this.listaTemas = resp
+      })
+    }
+  }
 
 }
