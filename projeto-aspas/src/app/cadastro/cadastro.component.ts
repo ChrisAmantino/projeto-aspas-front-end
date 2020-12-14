@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioModel } from '../model/UsuarioModel';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class CadastroComponent implements OnInit {
 
     private authService: AuthService,
     private router: Router,
+    private alert: AlertasService
 
   ) { }
 
@@ -28,22 +30,22 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrar() {
-    if (this.user.tipoUsuario == 'ALUNO' || this.user.tipoUsuario == 'TUTOR') {
+    if (this.user.tipoUsuario == 'ALUNO' || this.user.tipoUsuario == 'ALUNA' || this.user.tipoUsuario == 'ALUNE' || this.user.tipoUsuario == 'TUTOR' || this.user.tipoUsuario == 'TUTORA' || this.user.tipoUsuario == 'TUTORE') {
     if (this.senha === this.user.senhaUsuario) {
       this.authService.cadastrar(this.user).subscribe((resp:UsuarioModel) => {
         this.user = resp
-        alert('Usuário cadastro com sucesso!')
+        this.alert.showAlertSuccess('Usuário cadastro com sucesso!')
         this.router.navigate(['/login'])
         
       })
 
     } else {
 
-      alert('Suas senhas não conferem.')
+      this.alert.showAlertDanger('Suas senhas não conferem.')
 
     }
   } else {
-    alert ("Tipo de usuário inválido! Digite em letras maiúsculas 'ALUNO' ou 'TUTOR'")
+    this.alert.showAlertWarn("Tipo de usuário inválido! Digite em letras maiúsculas 'ALUNO'/'ALUNA'/ALUNE ou 'TUTOR'/TUTORA/TUTORE")
   }
 }
 }
