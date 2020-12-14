@@ -1,0 +1,256 @@
+/* GERAL */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Jost", sans-serif;
+  }
+  
+  .ajuste-tela {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+  }
+  .ajuste-tela h2 {
+    padding-top: 90px;
+  }
+  
+  .bg {
+      background-color: rgb(250, 250, 250);
+  }
+  
+  .colorV {
+    color: #00A56D;
+  }
+  
+  .colorV-bg {
+    background-color: #ddf0ea;
+  }
+  
+  .colorv {
+    color: #0dff7e;
+  }
+  
+ .colorv-bg {
+
+         background-color: #00A56D;
+ }
+
+  .colorv2-bg {
+    background-color: #0e1612;
+  }
+
+  .colorv3-bg {
+
+    background-color: #c294e7;
+}
+
+  
+  .colorA {
+    color: #FFFF59;
+  }
+  
+  .colorA-bg {
+    background-color: #FFFF59;
+  }
+  
+  .colorAz {
+    color: #24b2e2
+  }
+  .colorAz-bg {
+    background-color: #24b2e2
+  }
+  
+  .shadow {
+    box-shadow: 5px 5px 5px rgba(80, 80, 80, 0.548);
+  }
+  
+  /* /GERAL */
+  
+  
+  .bg-img {
+      background-image: url("../../assets/img/animado4.gif");
+      width: calc(100vw - 17px);
+      height: calc(100vh - 95px);
+  
+  }
+  
+  #topo h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+  }
+  
+  #topo h3 {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  #mascotetopo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #topo .btn-get-started {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #47b2e4;
+  }
+  
+  #topo .btn-get-started:hover {
+    background: #209dd8;
+  }
+  
+  .img-hover:hover {
+      filter: grayscale(100%);
+  }
+  .card-w {
+      display: flex;
+      justify-content: flex-start;
+  
+  }
+  
+  .card-ps img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .card-text {
+    margin-left: 15px;
+  }
+  
+  /* paralax css */
+  .parallax {
+      background-image: url(https://images.pexels.com/photos/3769995/pexels-photo-3769995.jpeg);
+      min-height: 300px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px;
+  }
+  /* acaba aqui o parallax*/
+ 
+
+  /*prova social perfis 
+
+  container */
+
+ .reverse {
+     
+     flex-direction: row-reverse;
+
+ }
+
+
+  /* missao e valores*/
+
+  .img-teste {
+
+    width: 300px; /*largura*/
+    justify-content: start;
+    align-items: center;
+    margin: 50px;
+    
+  }
+
+  .tamanho-2 { 
+    
+    height: 600px;
+    display: flex;
+    align-items: stretch;
+    
+   
+  }
+
+  .subtam-1
+  {
+
+    background-color: #f8fdfd;
+    justify-content: flex-start;
+    align-items: center;
+  }
+   
+  .subtam-2 {
+
+    background-color: #fffff;
+    padding: 20px;
+    margin: 20px;
+  }
+   
+
+  
+    /* cards quem somos */
+
+ .altura1
+ {
+  height: 500px;
+  
+ }
+
+ .subaltura
+
+ {
+   height: 80px;
+   justify-content: center;
+   margin: 50px;
+
+ }
+  
+    .quem-somos {
+      justify-content: center;
+      display: ruby;
+      width: 100%;
+      align-items: center;
+      
+  
+    }
+  
+  .quem-somos img{
+    max-width: 100%;
+  }
+  
+  .quem-somos img{
+    max-width: 100%;
+  }
+  
+  .img-container {
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .img-container img {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+  }
+  
+  .img-container:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+    /* /cards quem somos */
+
+
+    /* parcerias */
+
+.tamanhoParc {
+
+  height: 50px;
+  padding: 80px;
+  }
+   
+  .alturaParc
+  {
+    height: 400px;
+  }
