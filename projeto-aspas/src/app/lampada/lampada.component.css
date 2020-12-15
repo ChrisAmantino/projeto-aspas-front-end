@@ -1,0 +1,17 @@
+.bg-estrela {
+    background-image: url("../../assets/img/estrelas.gif");
+}
+
+.body {
+    background-color: #F0FFFF;
+}
+
+.parallax {
+    background-image: url("../../assets/img/parallax-lampada.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
