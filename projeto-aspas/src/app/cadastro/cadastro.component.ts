@@ -34,7 +34,7 @@ export class CadastroComponent implements OnInit {
     if (this.senha === this.user.senhaUsuario) {
       this.authService.cadastrar(this.user).subscribe((resp:UsuarioModel) => {
         this.user = resp
-        this.alert.showAlertSuccess('Usuário cadastro com sucesso!')
+        this.alert.showAlertSuccess('Usuário cadastrado com sucesso!')
         this.router.navigate(['/login'])
         
       })
@@ -45,7 +45,7 @@ export class CadastroComponent implements OnInit {
 
     }
   } else {
-    this.alert.showAlertWarn("Tipo de usuário inválido! Digite em letras maiúsculas 'ALUNO'/'ALUNA'/ALUNE ou 'TUTOR'/TUTORA/TUTORE")
+    this.alert.showAlertWarn("Tipo de usuário inválido! Digite em letras maiúsculas ALUNO/ ALUNA/ ALUNE ou TUTOR /TUTORA /TUTORE")
   }
 }
 }
