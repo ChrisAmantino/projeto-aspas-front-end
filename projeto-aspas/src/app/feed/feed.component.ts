@@ -88,6 +88,11 @@ export class FeedComponent implements OnInit {
       })
     }
   }
+  lampdialogo() {
+    this.alert.showAlertWarn('Posso ajudar?')
+
+  }
+  
 
   contemImg(postagem: PostagemModel){
    return (postagem.imagem != null) 
