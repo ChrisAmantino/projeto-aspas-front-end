@@ -1,7 +1,15 @@
 .icone {
-    letter-spacing: .2rem;
+    letter-spacing: .1.8rem;
     font-size: 12pt;
+    color:#8A2BE2;
+}
+.icone:hover {
+    color:black;
 }
 .navbar-left-color {
-    background-color: #AAE9FF;
+    background-color: #e7caf5;
 }
+ .bg-gif {
+    border-color: #8A2BE2;
+    border-radius: 25px ;
+} 

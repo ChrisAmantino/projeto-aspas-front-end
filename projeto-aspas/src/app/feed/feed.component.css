@@ -9,4 +9,7 @@
 .borda {
     border-radius: 25px;
 }
+.bg-gif {
+    background-image: url("../../assets/img/estrelas.gif");
+}
 
