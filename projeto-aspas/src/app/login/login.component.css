@@ -9,3 +9,8 @@
 .borda {
     border-radius: 25px;
 }
+
+.cursor {
+    width: 100%;
+    height: calc( 100vh - 245px);
+}
