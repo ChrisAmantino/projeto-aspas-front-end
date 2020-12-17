@@ -18,9 +18,7 @@
 
 /*  /inicio*/
 
-.colorA1 {
-  background-color: rgb(208, 245, 234);
-}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Jost", sans-serif;
@@ -143,16 +141,23 @@ h1, h2, h3, h4, h5, h6 {
   /*card motivos*/
 
   
-
-  .colorA-bg {
-    background-color: #4be9a7a6;
-  }
-
-  .colorAz-bg {
-    background-color: #ec5e8277
+  .colorA1 {
+    background-color: rgb(189, 235, 221);
   }
  
-  
+
+  .colorAz-bg {
+    background-color: #e0f0f0
+  }
+   
+  .colorA-bg {
+    background-color: #98a0eb93;
+  }
+ 
+  .colorv-bg {
+
+    background-color: #7377a096;
+}
 
 
   /* /card motivos */
@@ -179,10 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 
   /*prova social*/
 
-  .colorv-bg {
-
-    background-color: #9173a096;
-}
+  
 
 .card-PS {
 
@@ -213,9 +215,6 @@ h1, h2, h3, h4, h5, h6 {
   .img-teste {
 
     width: 100%; /*largura*/
-    
-
-
      }
 
   .tamanho-2 { 
@@ -241,7 +240,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     margin: 20px;
   }
-   
+
+
  /* /missao e valores */
   
     /* cards quem somos */
