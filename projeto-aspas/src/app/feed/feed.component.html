@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <h5 class="card-title text-monospace text-light">Compartilhe seu conhecimento ou conquista com
                         todos!</h5>
-                    <p class="card-text text-monospace text-light">Aqui você pode publicar fotos, vídeos e textos!</p>
+                    <p class="card-text  text-light">Aqui você pode publicar fotos, vídeos e textos!</p>
                     <div class="form-group">
                         <label class="text-monospace text-light" for="titulo">Título:</label>
                         <input type="text" class="form-control" id="título" placeholder="Digite aqui o seu título"
@@ -124,7 +124,7 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <p class="card-text text-monospace" aria-describedby="texto">{{item.descricao}}</p>
+                                    <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
                                     <div *ngIf='contemImg(item)'>
                                         <img src="{{item.imagem}}" class="card-img" alt="imagem da postagem"
                                             onerror="event.target.style.display='none'">
@@ -171,29 +171,17 @@
                                         </div>
 
                                         <div class="row d-flex align-items-center">
-                                            <div class="col-md-8">
+                                            <div class="col-md-12">
                                                 <h5 class="card-title text-monospace text-light">{{post.titulo}}</h5>
                                                 <!-- <small class="text-monospace text-light">Matéria:{{post.tema.materia}} - Ano:
                                                     {{post.tema.serie}}</small> -->
                                             </div>
-                                            <div class="col-md-4 d-flex justify-content-end">
-                                                <button class="mr-3 btn btn-info text-monospace"
-                                                    [routerLink]="['/editar-post', item.idPostagem]">
-                                                    Editar
-                                                </button>
-
-                                                <button class="btn btn-danger ml-3 text-monospace"
-                                                    [routerLink]="['/delete-post', item.idPostagem]">
-                                                    Apagar
-                                                </button>
-
-                                            </div>
-
+                                            
                                         </div>
                                     </div>
 
                                     <div class="card-body">
-                                        <p class="card-text text-monospace" aria-describedby="texto">{{post.descricao}}
+                                        <p class="card-text" aria-describedby="texto">{{post.descricao}}
                                         </p>
                                         <div *ngIf='contemImg(post)'>
                                             <img src="{{post.imagem}}" class="card-img" alt="imagem da postagem"
