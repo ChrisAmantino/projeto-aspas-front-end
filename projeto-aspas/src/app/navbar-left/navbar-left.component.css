@@ -1,15 +1,15 @@
 .icone {
     letter-spacing: .1.8rem;
     font-size: 12pt;
-    color:#8A2BE2;
+    color: #08091196;
 }
 .icone:hover {
     color:black;
 }
 .navbar-left-color {
-    background-color: #e7caf5;
+    background-color:  #98a0eb93;
 }
  .bg-gif {
-    border-color: #8A2BE2;
+    border-color: #7377a096;
     border-radius: 25px ;
 } 
