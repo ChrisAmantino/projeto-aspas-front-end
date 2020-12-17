@@ -1,4 +1,26 @@
-/* GERAL */
+
+/*inicio*/
+
+
+.botton-a{
+
+  border-radius: 10px;
+  opacity: 0.9;
+  border: none;
+
+}
+
+.botton-a:hover{
+  background-color: rgba(102, 51, 153, 0.76);
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+/*  /inicio*/
+
+.colorA1 {
+  background-color: rgb(208, 245, 234);
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Jost", sans-serif;
@@ -21,26 +43,21 @@ h1, h2, h3, h4, h5, h6 {
     color: #00A56D;
   }
   
-  .colorV-bg {
-    background-color: #ddf0ea;
-  }
+  
   
   .colorv {
-    color: #0dff7e;
+    color: #3f9ba1a1;
   }
   
- .colorv-bg {
-
-         background-color: #00A56D;
- }
+ 
 
   .colorv2-bg {
-    background-color: #0e1612;
+    background-color: #7bb997;
   }
 
   .colorv3-bg {
 
-    background-color: #c294e7;
+    background-color: #faf9fd5b;
 }
 
   
@@ -48,16 +65,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFFF59;
   }
   
-  .colorA-bg {
-    background-color: #FFFF59;
-  }
   
-  .colorAz {
-    color: #24b2e2
-  }
-  .colorAz-bg {
-    background-color: #24b2e2
-  }
+ 
   
   .shadow {
     box-shadow: 5px 5px 5px rgba(80, 80, 80, 0.548);
@@ -66,13 +75,15 @@ h1, h2, h3, h4, h5, h6 {
   /* /GERAL */
   
   
-  .bg-img {
-      background-image: url("../../assets/img/animado4.gif");
-      width: calc(100vw - 17px);
-      height: calc(100vh - 95px);
+ .bg-img {
+      background-image: url("https://cutewallpaper.org/21/gif-wallpaper-anime/Animated-GIFs-for-use-in-wallpapers.gif");
+       width: calc(100vw - 17px);
+       height: calc(100vh - 95px);
+  } 
   
-  }
   
+
+
   #topo h2 {
     font-size: 48px;
     font-weight: 700;
@@ -127,10 +138,63 @@ h1, h2, h3, h4, h5, h6 {
   .card-text {
     margin-left: 15px;
   }
+
+
+  /*card motivos*/
+
+  
+
+  .colorA-bg {
+    background-color: #4be9a7a6;
+  }
+
+  .colorAz-bg {
+    background-color: #ec5e8277
+  }
+ 
+  
+
+
+  /* /card motivos */
+
+  /*trilhazinha*/
+
+
+
+  .brain {
+
+    width: 300px;
+    height: 300px;
+    vertical-align: middle;
+    border-style: none;
+
+  }
+
+  .text-a {
+   margin-top: auto;
+   margin-bottom: auto;
+
+
+  }
+
+  /*prova social*/
+
+  .colorv-bg {
+
+    background-color: #9173a096;
+}
+
+.card-PS {
+
+  border-radius: 10px;
+}
+
+/* /prova social */
+
   
   /* paralax css */
   .parallax {
-      background-image: url(https://images.pexels.com/photos/3769995/pexels-photo-3769995.jpeg);
+      background-image: url("https://images.squarespace-cdn.com/content/v1/57ad2403ebbd1aed407cb884/1569036906517-HQDT9PJVJ13IPYEHUEA3/ke17ZwdGBToddI8pDm48kD6g6d_8IznzvwGE9lO5DQoUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2duEISsHSdlwfVfJzHpfD8tDF_rm8Lz0236jM3eVzXh5_CjLISwBs8eEdxAxTptZAUg/SLATE_22.gif");
       min-height: 300px;
       background-attachment: fixed;
       background-position: center;
@@ -141,27 +205,18 @@ h1, h2, h3, h4, h5, h6 {
   /* acaba aqui o parallax*/
  
 
-  /*prova social perfis 
-
-  container */
-
- .reverse {
-     
-     flex-direction: row-reverse;
-
- }
+  
 
 
   /* missao e valores*/
 
   .img-teste {
 
-    width: 300px; /*largura*/
-    justify-content: start;
-    align-items: center;
-    margin: 50px;
+    width: 100%; /*largura*/
     
-  }
+
+
+     }
 
   .tamanho-2 { 
     
@@ -182,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
    
   .subtam-2 {
 
-    background-color: #fffff;
+    
     padding: 20px;
     margin: 20px;
   }
@@ -191,66 +246,74 @@ h1, h2, h3, h4, h5, h6 {
   
     /* cards quem somos */
 
- .altura1
- {
-  height: 500px;
-  
- }
-
- .subaltura
-
- {
-   height: 80px;
-   justify-content: center;
-   margin: 50px;
-
- }
-  
-    .quem-somos {
-      justify-content: center;
-      display: ruby;
+    .container_ {
       width: 100%;
+      height: 360px;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      
-  
     }
-  
-  .quem-somos img{
-    max-width: 100%;
-  }
-  
-  .quem-somos img{
-    max-width: 100%;
-  }
-  
-  .img-container {
-    overflow: hidden;
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-  
-  .img-container img {
-    -webkit-transition: -webkit-transform .5s ease;
-    transition: transform .5s ease;
-  }
-  
-  .img-container:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  
+    .card-container_ {
+      height: 300px;
+    }
+    .card_ {
+      width: 100%;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+      transform-style: preserve-3d;
+    }
+    .card-container_:hover .card_{
+      transform: rotateY(180deg);
+    }
+    .card_ figure {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      margin: 0;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .card_ .front {
+      background-size: 100%;
+      color: white;
+    }
+    .card_ .front-1 {
+      background-image: url("../../assets/img/christhianQS.jpg");
+    }
+    .card_ .front-2 {
+      background-image: url("../../assets/img/jonathanFerreiraQS-01.jpg");
+    }
+    .card_ .front-3 {
+      background-image: url("../../assets/img/julianaQS.jpg");
+    }
+    .card_ .front-4 {
+      background-image: url();
+    }
+    .card_ .front-5 {
+      background-image: url();
+    }
+    .card_ .back {
+      background-color: #47B2E4 ;
+      color: white;
+      transform:rotateY(180deg);
+      border: -2px;
+    }
+    .socialIconsCards {
+      display: flex;
+      color: inherit;
+      padding: 10px 20px 0 20px;
+    }
+
+
+    .colorV-bg {
+      background-color:#8A2BE2;
+    }
+
     /* /cards quem somos */
 
 
     /* parcerias */
 
-.tamanhoParc {
-
-  height: 50px;
-  padding: 80px;
-  }
-   
-  .alturaParc
-  {
-    height: 400px;
-  }
