@@ -10,12 +10,32 @@ import { UsuarioService } from '../service/usuario.service';
 
 export class NavbarLeftComponent implements OnInit {
 
+  token = localStorage.getItem('token')
+
+
   constructor(
    
   ) { }
 
   ngOnInit() {
   }
+
+  nome() {
+    let login = localStorage.getItem('nome')
+    if(this.token == null) {
+      login = 'usuario'
+    }
+    return new String(login)
+  }
+
+  tipo() {
+    let tipo = localStorage.getItem('tipo')
+    if(this.token == null) {
+      tipo = 'Tipo Usuario'
+    }
+    return new String(tipo)
+  }
+
 
 }
 
