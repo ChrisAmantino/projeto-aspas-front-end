@@ -19,3 +19,9 @@
     background-size: cover;
     height: 400px;
 }
+/* Posição do botao lampadinha */
+.position {
+    position:fixed;
+    bottom: 550px;
+    right: -10px;
+}
