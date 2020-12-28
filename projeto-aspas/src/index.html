@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8">
   <title>Aspas</title>
@@ -7,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body class="body">
   <app-root></app-root>
   <div vw class="enabled">
@@ -15,9 +17,26 @@
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
+  <!-- Api Vlibras -->
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+  <!-- //Api Chatbot -->
+  <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "b83b6fb5-3ef7-4dd0-aa6d-ccbdd9cf601c", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "d96db256-9236-443a-8d2f-528a327c7eeb", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
 </body>
+
 </html>
