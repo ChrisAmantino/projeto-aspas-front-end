@@ -13,3 +13,20 @@
     border-color: #7377a096;
     border-radius: 25px ;
 } 
+
+.drop {
+    background-color: #98a0eb93;
+   
+}
+
+.navbarleft {
+    position: fixed;
+    
+}
+
+/* .teste {
+   
+    
+    height: 450px;
+    width: 300px;
+} */
