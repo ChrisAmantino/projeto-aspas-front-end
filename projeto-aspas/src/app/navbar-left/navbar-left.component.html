@@ -1,4 +1,4 @@
-<div class="card h-30 w-100 navbar-left-color bg-gif">
+<div class="card h-75 w-24 navbar-left-color bg-gif navbarleft ml-3">
     <ul class="nav nav-pills flex-column">
         <li class="nav-item">
             <a class="nav-link texto font-weight-bold ml-0 mt-1 icone" href="#">
@@ -15,18 +15,36 @@
         </li>
 
         <li class="nav-item mb-2 mt-2">
-            <a class="nav-link texto font-weight-bold icone" href="#">
+            <a class="nav-link texto font-weight-bold icone mt-1" href="#">
                 <img src="https://www.flaticon.com/svg/static/icons/svg/43/43279.svg" alt="" width="30" height="26"
                     class="d-inline-block align-top">
                 Editar Perfil</a>
         </li>
       
         <li class="nav-item">
-            <a class="nav-link texto font-weight-bold icone" href="#">
+            <a class="nav-link texto font-weight-bold icone mt-1" >
                 <img src="https://www.flaticon.com/svg/static/icons/svg/3190/3190426.svg" alt="" width="30" height="26"
                     class="d-inline-block align-top">
-                Ano Escolar</a>
-            <ul>
+                Ano Escolar: </a> 
+
+                <div class=" ls-field-lg ls-custom-select p-3">
+                   
+                    <select class="ls-select texto font-weight-bold icone rounded drop mb-2" style="width:250px;">
+                        <option value="1">Selecione o ano escolar </option>
+                        <option value="2" class="text-center"> 8ª ano EF </option>
+                        <option value="3"> 9ª ano EF </option>
+                        <option value="4"> 1ª ano EM </option>
+                        <option value="4"> 2º ano EM </option>
+                        <option value="4"> 3º ano EM </option>
+                        <option value="4"> Todos </option>
+
+                        
+                    </select>
+                    
+                </div>
+        </li>
+
+            <!-- <ul>
                 <a class="nav-link texto font-weight-bold icone" href="#">
                     <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
                         height="20" class="d-inline-block align-top">
@@ -68,64 +86,64 @@
                         height="20" class="d-inline-block align-top">
                     3º Ano - EM</a>
             </ul>
-        </li>
+        </li> -->
+
+<!-- <div class="dropdown">
+    <div class="dropdown-select">
+
+        <span class="select">Select a item</span>
+        <i class="fa fa-caret down icon"></i>
+ 
+    </div>
+
+    <div class="dropdown-list">
+        <div class="dropdown-list__item">Pepsi</div>
+
+        <div class="dropdown-list__item">Pepsi</div>
+
+        <div class="dropdown-list__item">Pepsi</div>
+
+        <div class="dropdown-list__item">Pepsi</div>
+
+
+    </div>
+
+</div> -->
 
         <li class="nav-item">
-            <a class="nav-link texto font-weight-bold icone" href="#">
+            <a class="nav-link texto font-weight-bold icone mt-2">
                 <img src="https://www.flaticon.com/premium-icon/icons/svg/2702/2702162.svg" alt="" width="30" height="26"
                     class="d-inline-block align-top">
-                Matéria</a>
-            <ul>
-                <a class="nav-link texto font-weight-bold icone" href="#">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
-                        height="20" class="d-inline-block align-top">
-                    Português</a>
-            </ul>
-            <ul>
-                <a class="nav-link texto font-weight-bold icone" href="#">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
-                        height="20" class="d-inline-block align-top">
-                    Matemática</a>
-            </ul>
-            <ul>
-                <a class="nav-link texto font-weight-bold icone" href="#">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
-                        height="20" class="d-inline-block align-top">
-                    História</a>
-            </ul>
-            <ul>
-                <a class="nav-link texto font-weight-bold icone" href="#">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
-                        height="20" class="d-inline-block align-top">
-                    Geografia</a>
-            </ul>
-            <ul>
-                <a class="nav-link texto font-weight-bold icone" href="#">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
-                        height="20" class="d-inline-block align-top">
-                    Biologia</a>
-            </ul>
-            <ul>
-                <a class="nav-link texto font-weight-bold icone" href="#">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
-                        height="20" class="d-inline-block align-top">
-                    Química</a>
-            </ul>
-            <ul>
-                <a class="nav-link texto font-weight-bold icone" href="#">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1014/1014924.svg" alt="" width="25"
-                        height="20" class="d-inline-block align-top">
-                    Literatura</a>
-            </ul>
+                Matéria:</a>
+
         </li>
+            
+
+                <div class=" ls-field-lg ls-custom-select p-3 select-estiloso">
+                    <select class="ls-select texto font-weight-bold icone rounded drop" style="width:250px;">
+                        <option value="1">Selecione a matéria </option>
+                        <option value="2" class="text-center"> Português</option>
+                        <option value="3"> Matemática </option>
+                        <option value="4"> Física </option>
+                        <option value="4"> Química </option>
+                        <option value="4"> Biologia </option>
+                        <option value="4"> História </option>
+                        <option value="4"> Química </option>
+                    </select>
+                </div>
+
+                <div class="d-grid gap-2 d-md-block ml-3 mt-2 justify-content-start texto text-monospace mt-4">
+                    <button class="btn btn-outline-dark" type="button">Pesquisar</button>
+                    </div>
 
         <li>
-                <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4 icone"
+                <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4 icone mt-3"
                   routerLink='/lampada'>
                   <img src="../../assets/img/mascote.png" alt="" 
                   height="40" class="d-inline-block align-middle">
-                  Conheça a Luzinha!</a>
+                  Conheça a Lampadinha!</a>
         </li>
+
     </ul>
 
 </div>
