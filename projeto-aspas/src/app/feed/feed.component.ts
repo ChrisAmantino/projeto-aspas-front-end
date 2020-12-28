@@ -1,9 +1,11 @@
 import { Component, OnInit, Sanitizer } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ComentarioModel } from '../model/ComentarioModel';
 import { PostagemModel } from '../model/PostagemModel';
 import { TemaModel } from '../model/TemaModel';
 import { UsuarioModel } from '../model/UsuarioModel';
 import { AlertasService } from '../service/alertas.service';
+import { ComentarioService } from '../service/comentario.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
@@ -25,9 +27,13 @@ export class FeedComponent implements OnInit {
   idTema!: number;
   nomeTema!: string;
 
+  comentario: ComentarioModel = new ComentarioModel();
+  listaComentarios!: ComentarioModel[];
+
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
+    private comentarioService: ComentarioService,
     private sanitizer: DomSanitizer,
     private alert: AlertasService
   ) { }
@@ -36,6 +42,7 @@ export class FeedComponent implements OnInit {
     window.scroll(0,0)
     this.findAllPostagens()
     this.findAllTemas()
+    this.findAllComentarios()
   }
 
   findAllPostagens() {
@@ -110,6 +117,31 @@ export class FeedComponent implements OnInit {
         this.listaTemas = resp
       })
     }
+  }
+
+  findAllComentarios() {
+    this.comentarioService.getAllComentario().subscribe((resp: ComentarioModel[]) => {
+      this.listaComentarios = resp
+    })
+  }
+
+  comentar(id: number) {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: PostagemModel) => {
+      this.postagem = resp
+    })
+    this.comentario.postagem = this.postagem
+    if(this.comentario.texto == null || this.comentario.postagem == null )
+    {
+      this.alert.showAlertWarn("Preencha o campo corretamente!")
+    } else {
+      this.comentarioService.postComentario(this.comentario).subscribe((resp:ComentarioModel)=>{
+        this.comentario = resp
+        this.comentario = new ComentarioModel();
+        this.alert.showAlertSuccess("Comentario feito com sucesso!");
+        this.findAllComentarios();
+      });
+    }
+
   }
 
 }
