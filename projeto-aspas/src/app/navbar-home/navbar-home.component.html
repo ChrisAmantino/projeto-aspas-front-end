@@ -1,5 +1,5 @@
-<nav style="height: 60px;"
-  class="navbar  container-fluid d-flex justify-content-center navbar-expand-lg navbar-light bg-light sticky-top">
+<nav style="height: 80px;"
+  class="navbarcontainer-fluid d-flex justify-content-center navbar-expand-lg navbar-light bg-light sticky-top">
 
   <nav class="navbar navbar-light justify-content-start">
     <a class="navbar-brand text-monospace texto-logo" href="#">
@@ -12,12 +12,12 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="justify-content-center">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse teste navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
         <div *ngIf='auth.btnLogin()'>
           <li class="nav-item">
-            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/home'>Home <span
+            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/home'><span>Home</span> <span
                 class="sr-only">(current)</span></a>
           </li>
         </div>
@@ -25,14 +25,14 @@
         <div *ngIf='auth.btnSair()'>
 
           <li class="nav-item">
-            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/feed'>Feed</a>
+            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/feed'><span>Feed</span></a>
           </li>
         </div>
 
         <div *ngIf='auth.btnLogin()'>
 
           <li class="nav-item">
-            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/login'>Login</a>
+            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" routerLink='/login'><span>Login</span></a>
           </li>
         </div>
 
@@ -40,20 +40,20 @@
 
           <li class="nav-item">
             <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4"
-              routerLink='/cadastro'>Cadastro</a>
+              routerLink='/cadastro'><span>Cadastro</span></a>
           </li>
 
         </div>
 
         <div *ngIf='auth.btnSair()'>
           <li class="nav-item">
-            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4">Perfil</a>
+            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4"><span>Perfil</span></a>
           </li>
         </div>
 
         <div *ngIf='auth.btnSair()'>
           <li class="nav-item">
-            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" (click)='sair()'>Sair</a>
+            <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-4" (click)='sair()'><span>Sair</span></a>
           </li>
         </div>
 
