@@ -194,6 +194,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
+.card-ps2 img {
+  width: 70%;
+  border-radius: 50%;
+  height: 70%;
+}
+
+.card-car {
+  width: 10px;
+}
+
 /* /prova social */
 
   
