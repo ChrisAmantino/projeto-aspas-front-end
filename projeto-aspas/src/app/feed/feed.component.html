@@ -56,8 +56,9 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="text-monospace text-light" for="imagem">Imagem:</label>
-                                <input type="text" class="form-control" id="imagem"
-                                    placeholder="Copie e cole o link da imagem aqui!" [(ngModel)]='postagem.imagem'>
+                                <img src="/src/assets/img/imagem-padrao.png" class="w-100" alt="" id="imagem-preview">
+                                <input type="file" (change)="carregarImagemPreview($event)"
+                                    [(ngModel)]='postagem.imagem'>
                             </div>
                         </div>
                         <div class="col-md-6">
