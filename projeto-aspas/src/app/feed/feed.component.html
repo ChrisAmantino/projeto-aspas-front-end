@@ -1,4 +1,4 @@
-<div class="container-fluid bg-gif">
+<div class="col-sm col-lg col-12 container-fluid bg-gif">
     <!-- <div class="parallax "> 
 
     </div> -->
@@ -82,7 +82,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 p-3">
                             <button type="button" class="btn btn-outline-light w-100"
                                 (click)='publicar()'>Publicar</button>
                         </div>
@@ -97,10 +97,10 @@
 
             <nav class="d-flex justify-content-center">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active text-secondary text-monospace font-weight-bold" id="nav-home-tab"
+                    <a class=" ml-5 mr-5 nav-item nav-link active text-secondary justify-content-center text-monospace font-weight-bold" id="nav-home-tab"
                         data-toggle="tab" href="#minhas-postagens" role="tab" aria-controls="nav-home"
                         aria-selected="true">Todas as postagens</a>
-                    <a class="nav-item text-monospace nav-link text-secondary font-weight-bold" id="nav-profile-tab"
+                    <a class=" ml-5 mr-5 nav-item text-monospace nav-link justify-content-center text-secondary font-weight-bold" id="nav-profile-tab"
                         data-toggle="tab" href="#postagens-temas" role="tab" aria-controls="nav-profile"
                         aria-selected="false">Postagens por matéria</a>
                 </div>
@@ -111,12 +111,12 @@
                 <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
                     aria-labelledby="nav-postagens-tab">
                     <div class="row mt-3 mb-3">
-                        <div class="col-md-10 pr-0">
+                        <div class="p-2 col-md-10 pr-0">
                             <input class="form-control w-100" type="search" placeholder="Pesquisar postagem"
                                 aria-label="Pesquisar" [(ngModel)]='titulo'>
                         </div>
-                        <div class="col-md-2 pl-0">
-                            <button class="btn btn-outline-warning w-100" type="button"
+                        <div class="p-2 col-md-2 pl-0">
+                            <button class=" btn btn-outline-warning w-100" type="button"
                                 (click)='findByTituloPostagem()'>Pesquisar</button>
                         </div>
                     </div>
@@ -138,8 +138,8 @@
                                                 Ano:
                                                 {{item.tema.serie}}</small>
                                         </div>
-                                        <div class="col-md-4 d-flex justify-content-end">
-                                            <button class="mr-3 btn btn-info text-monospace"
+                                        <div class="p-2 col-md-4 d-flex justify-content-end">
+                                            <button class=" mr-3 btn btn-info text-monospace"
                                                 [routerLink]="['/editar-post', item.idPostagem]">
                                                 Editar
                                             </button>
@@ -182,11 +182,11 @@
                                                     [(ngModel)]='comentario.texto' />
                                             </div>
                                         </div>
-                                        <div class="col-md-2 d-flex justify-content-end mt-3">
+                                        <div class="col-md-2 d-flex justify-content-center p-2">
                                             <button type="button" class="btn btn-success"
                                                 (click)='comentar(item.idPostagem)'>Comentar</button>
                                         </div>
-                                        <div class="row d-flex justify-content-center">
+                                        <div class="row d-flex justify-content-center p-2">
                                             <div class="col-md-12">
                                                 <button type="button" class="btn btn-outline-info mb-2 ml-3"
                                                     data-toggle="collapse" data-target="#collapseExample"> Mostrar

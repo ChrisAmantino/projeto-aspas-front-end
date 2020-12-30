@@ -19,10 +19,10 @@
    
 }
 
-.navbarleft {
-    position: fixed;
+/* .navbarleft {
+
     
-}
+} */
 
 /* .teste {
    
@@ -30,3 +30,7 @@
     height: 450px;
     width: 300px;
 } */
+
+.teste2 {
+    z-index: 0;
+}
