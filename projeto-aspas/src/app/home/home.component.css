@@ -1,20 +1,18 @@
+
 /* GERAL */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Jost", sans-serif;
 }
 
-.ajuste-tela {
-  width: 100vw;
-  height: 100vh;
-  margin: auto;
-}
-.ajuste-tela h2 {
+
+.pqAspas {
   padding-top: 90px;
+  padding-bottom: 50px;
 }
 
 .bg {
-    background-color: rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
 }
 
 .colorV {
@@ -37,16 +35,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFF59;
 }
 
-.colorA-bg {
-  background-color: #FFFF59;
-}
 
-.colorAz {
-  color: #24b2e2
-}
-.colorAz-bg {
-  background-color: #24b2e2
-}
+
+
 
 .shadow {
   box-shadow: 5px 5px 5px rgba(80, 80, 80, 0.548);
@@ -54,13 +45,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* /GERAL */
 
-
-.bg-img {
-    background-image: url("../../assets/bg.jpg") ;
-    width: calc(100vw - 17px);
-    height: calc(100vh - 95px);
-    
-}
 
 #topo h2 {
   font-size: 48px;
@@ -75,28 +59,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
 }
 
-#mascotetopo{
-  display: flex;
-  align-items: center;
+.d-flexx {
+  display:flex;
+  flex-direction:column;
   justify-content: center;
 }
 
-#topo .btn-get-started {
-  font-family: "Jost", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 28px 11px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px 0 0 0;
-  color: #fff;
-  background: #47b2e4;
+#mascotetopo{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-left: 50px;
+  width: 70%;
 }
 
-#topo .btn-get-started:hover {
-  background: #209dd8;
+#mascotetopo img {
+  width: 40%;
 }
 
 .img-hover:hover {
@@ -117,49 +95,529 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 15px;
 }
 
-/* paralax css */
-.parallax {
-    background-image: url(https://images.pexels.com/photos/3769995/pexels-photo-3769995.jpeg);
-    min-height: 300px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/* acaba aqui */
 
 
   /* cards quem somos */
 
-  .quem-somos {
+.quemSomos {
+  padding: 50px 0;
+}
+
+.QS {
+  display: flex;
+  justify-content: center;
+}
+
+.flip-container {
+  width: 190px;
+  height: 300px;
+  margin: 20px 10px;
+}
+
+.flipper{
+  width: 190px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.flip-container:hover .flipper{
+  transform: rotateY(180deg);
+}
+
+.front {
+  border-radius: 10px;
+  width: 190px;
+  height: 300px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-color: rgb(189, 235, 221);
+  position: absolute;
+  width: 190px;
+  height: 300px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.back p {
+  color: #fff;
+  font-size: 14pt;
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.back img {
+  padding: 10px;
+}
+
+.back a:hover {
+  transform: scale(1.2);
+  transition: transform 0.8s;
+
+}
+
+#front-1 {
+  background-image: url("../../assets/img/christhianQS.jpg");
+}
+#front-2 {
+  background-image: url("../../assets/img/jonathanFerreiraQS-01.jpg");
+}
+#front-3 {
+  background-image: url("../../assets/img/julianaQS.jpg");
+}
+#front-4 {
+  background-image: url("../../assets/img/stefanieQS.jpg");
+}
+#front-5 {
+  background-image: url("../../assets/img/vivianQS.jpg");
+} 
+
+
+  /* /cards quem somos */
+
+
+/*inicio*/
+
+
+.botton-a{
+
+  border-radius: 10px;
+  opacity: 0.9;
+  border: none;
+
+}
+
+.botton-a:hover{
+  background-color: rgba(102, 51, 153, 0.76);
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+/*  /inicio*/
+
+
+  .ajuste-tela {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+  }
+  .ajuste-tela h2 {
+    padding-top: 90px;
+  }
+  
+  .bg {
+      background-color: rgb(250, 250, 250);
+  }
+  
+  .colorV {
+    color: #00A56D;
+  }
+  
+  
+  
+  .colorv {
+    color: #3f9ba1a1;
+  }
+  
+
+
+  .colorv2-bg {
+    background-color: #7bb997;
+  }
+
+  .colorv3-bg {
+
+    background-color: #faf9fd5b;
+}
+
+  
+  .colorA {
+    color: #FFFF59;
+  }
+  
+  .shadow {
+    box-shadow: 5px 5px 5px rgba(80, 80, 80, 0.548);
+  }
+  
+  /* /GERAL */
+  
+  
+ .bg-img {
+      background-image: url("https://cutewallpaper.org/21/gif-wallpaper-anime/Animated-GIFs-for-use-in-wallpapers.gif");
+      width: 100%;
+      height: 600px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;   
+  } 
+  
+.topoCon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  }
+
+  #topo h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    align-self: center;
+  }
+  
+  #topo h3 {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .contTopo {
+    color: #fff;
+    padding: 10px;
+    display:inline;
+    margin: auto;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
     justify-content: center;
-    width: 100%;
     
   }
 
-.quem-somos img{
-  max-width: 100%;
+  .textTopo {
+    height: 500px;
+    width: 70%;
+    display: middle;
+    vertical-align: middle;
+    padding: 150px ;
+  }
+
+  .lampTopo {
+    height: 500px;
+    width: 30%;
+    
+  }
+
+  .lampTopo img {
+    width: 100%;
+    padding: 50px;
+    margin-right: 100px;
+  }
+  
+  .img-hover:hover {
+      filter: grayscale(100%);
+  }
+  .card-w {
+      display: flex;
+      justify-content: flex-start;
+  
+  }
+  
+  .card-ps img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .card-text {
+    margin-left: 15px;
+  }
+
+
+  /*card motivos*/
+
+  
+  .colorA1 {
+    background-color: rgb(189, 235, 221);
+  }
+ 
+
+  .colorAz-bg {
+    background-color: #e0f0f0
+  }
+   
+  .colorA-bg {
+    background-color: #98a0eb93;
+  }
+ 
+  .colorv-bg {
+
+    background-color: #7377a096;
 }
 
-.quem-somos img{
-  max-width: 100%;
+
+  /* /card motivos */
+
+  /*trilhazinha*/
+
+
+
+  .brain {
+    width: 300px;
+    height: 300px;
+    vertical-align: middle;
+    border-style: none;
+
+  }
+
+  .text-a {
+   margin-top: auto;
+   margin-bottom: auto;
+
+
+  }
+
+  /*prova social*/
+
+  
+
+.card-PS {
+
+  border-radius: 10px;
 }
 
-.img-container {
-  overflow: hidden;
-  padding-top: 30px;
-  padding-bottom: 40px;
-}
+/* /prova social */
 
-.img-container img {
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-}
+  
+  /* paralax css */
+  .parallax {
+      background-image: url("https://images.squarespace-cdn.com/content/v1/57ad2403ebbd1aed407cb884/1569036906517-HQDT9PJVJ13IPYEHUEA3/ke17ZwdGBToddI8pDm48kD6g6d_8IznzvwGE9lO5DQoUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2duEISsHSdlwfVfJzHpfD8tDF_rm8Lz0236jM3eVzXh5_CjLISwBs8eEdxAxTptZAUg/SLATE_22.gif");
+      min-height: 300px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px;
+  }
+  /* / parallax*/
 
-.img-container:hover img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
 
-  /* /cards quem somos */
+  
+
+
+  /* missao e valores*/
+
+  .tamanho-2 { 
+    height: 600px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .subtam-1 {
+    background-color: #f8fdfd;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .subtam-2 {
+    padding: 20px;
+    margin: 20px;
+  }
+
+
+ /* /missao e valores */
+  
+
+    /* para estudantes */
+
+  .paraEstudantes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1109px;
+    margin: 0 auto;
+  }
+
+  .paraEstudantes > div {
+    justify-content: center;
+    margin: auto;
+    position: relative;
+  }
+
+  .paraEstudantes h5 {
+    text-align: center;
+  }
+
+  .paraEstudantes p {
+    text-align: justify;
+  }
+  
+    
+  .img-ajuste {
+    width: 100%;
+    display: block;
+    border: transparent thin solid;
+    padding: 5px;
+  }
+
+  @media (max-width: 600px) {
+    .bg-img {
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position-x: -22rem;
+      background-position-y:top;
+    }
+    #topo h2 {
+      font-size: 28px;
+      line-height: 30px;
+      color: #fff;
+      padding-left: 10px;
+    }
+    
+    #topo h3 {
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 20px;
+      font-size: 15px;
+      padding-left: 10px;
+    }
+
+    .contTopo {
+      color: #fff;
+      padding: 10px;
+      display:inline;
+      margin: auto;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      height: 50vh;
+      
+    }
+  
+    .textTopo {
+      width: 70%;
+    }
+    
+    .textTopo a {
+      margin-left: 10px;
+    }
+    
+    .lampTopo {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      padding-right: 20px;
+    }
+  
+    .lampTopo img {
+      width: 200%;
+      margin: auto;
+    }
+
+    #mascotetopo{
+      max-width: 300px;
+    }
+
+    #mascotetopo img {
+      max-width: 60%;
+    }
+
+    .d-lg-flex a{
+      margin-left: 10px;
+    }
+
+    .pqAspas {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .subtam-1 h3 {
+      padding: 40px 30px 0 30px;
+    }
+    
+    .paraEstudantes {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0 30px;
+      margin-top: 50px;
+    }
+
+    .paraEstudantes p {
+      text-align: justify;
+    }
+
+    .mt-50{
+      margin-top: 50px;
+    }
+
+    #paraTutotes {
+      padding-bottom: 50px;
+    }
+
+    .paraEstudantes img{
+      width: 90%;
+    }
+
+    .parallax {
+      background-size: auto;
+      min-height: 200px;
+      height: 200px;
+    }
+
+    .QS {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .flip-container {
+      width: 190px;
+      height: 300px;
+      margin: 10px 10px;
+    }    
+
+  }
+
+  @media (max-width: 400px) {
+    .lampTopo img {
+      display: none;
+    }
+
+    .topoCon {
+      height: 85%;
+    }
+
+    .contTopo {
+      color: #fff;
+      padding: 10px;
+      display:inline;
+      margin: 0;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      
+    }
+
+    .textTopo {
+      width: 70%;
+    }
+    
+    .textTopo a {
+      margin-left: 10px;
+    }
+
+    .card-text {
+      margin-left: 0;
+    }
+  }
+
