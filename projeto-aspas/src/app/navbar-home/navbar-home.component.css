@@ -18,5 +18,6 @@ a {
 span {
     background-color:#F8F9FA;
     padding: 10px;
-
+    z-index: 1;
 }
+
