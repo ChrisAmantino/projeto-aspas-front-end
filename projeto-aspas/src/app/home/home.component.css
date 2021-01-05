@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   backface-visibility: hidden;
 }
 .back {
-  background-color: rgb(189, 235, 221);
+  background-color: #43ABAC;
   position: absolute;
   width: 190px;
   height: 300px;

@@ -1,13 +1,13 @@
 .icone {
     letter-spacing: .1.8rem;
     font-size: 12pt;
-    color: #08091196;
+    color: rgba(27, 27, 27, 0.781);
 }
 .icone:hover {
-    color:black;
+    color: rgba(27, 27, 27, 0.781);
 }
 .navbar-left-color {
-    background-color:  #98a0eb93;
+    background-color:  #C4F7FC;
 }
  .bg-gif {
     border-color: #7377a096;
@@ -15,7 +15,7 @@
 } 
 
 .drop {
-    background-color: #98a0eb93;
+    background-color: #C4F7FC;
    
 }
 
