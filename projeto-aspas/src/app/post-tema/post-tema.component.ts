@@ -44,7 +44,7 @@ export class PostTemaComponent implements OnInit {
       this.temaService.postTema(this.tema).subscribe((resp: TemaModel) => {
         this.tema = resp
         this.router.navigate(['/feed'])
-        alert('Tema cadastrado com sucesso!')
+        this.alert.showAlertSuccess('Tema cadastrado com sucesso!')
       })
     }
 
