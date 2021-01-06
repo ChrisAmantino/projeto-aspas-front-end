@@ -22,6 +22,6 @@
 /* Posição do botao lampadinha */
 .position {
     position:fixed;
-    bottom: 540px;
+    bottom: 75%;
     right: -10px;
 }
