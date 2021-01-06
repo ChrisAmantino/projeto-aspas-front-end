@@ -56,7 +56,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="text-monospace text-light" for="imagem">Imagem:</label>
-                                <img src="/src/assets/img/imagem-padrao.png" class="w-100" alt="" id="imagem-preview">
+                                <img src="" class="w-100" alt="" id="imagem-preview">
                                 <input type="file" (change)="carregarImagemPreview($event)"
                                     [(ngModel)]='postagem.imagem'>
                             </div>
@@ -183,11 +183,11 @@
                                                     [(ngModel)]='comentario.texto' />
                                             </div>
                                         </div>
-                                        <div class="col-md-2 d-flex justify-content-center p-2">
+                                        <div class="col-md-2 d-flex justify-content-center mt-3">
                                             <button type="button" class="btn btn-success"
                                                 (click)='comentar(item.idPostagem)'>Comentar</button>
                                         </div>
-                                        <div class="row d-flex justify-content-center p-2">
+                                        <div class="row d-flex justify-content-center mt-3 mb-3 p-2">
                                             <div class="col-md-12">
                                                 <button type="button" class="btn btn-outline-info mb-2 ml-3"
                                                     data-toggle="collapse" data-target="#collapseExample"> Mostrar
