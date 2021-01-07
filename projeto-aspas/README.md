@@ -1,27 +1,53 @@
-# ProjetoAspas
+<h1 align="center">
+    <img src="https://i.imgur.com/FFEwm74.jpg">
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+## 📋 Sobre
 
-## Development server
+O Projeto **ASPAS** é uma rede social de  educação criado dentro do **Bootcamp Desenvolvedor Web Full Stack Java Júnior da Generation Brasil** com o objetivo de conectar Educadores e alunos do ensino fundamental e médio.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## 🚀 Tecnologias Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O Projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-## Build
+### **Front-End**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- [Angular](https://cli.angular.io/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [Bootstrap](https://getbootstrap.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-## Running unit tests
+### **Back-End**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Java](https://www.java.com/pt-BR/)
+- [MySQL](https://www.mysql.com/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Postman](https://www.postman.com/)
 
-## Running end-to-end tests
+## 📁 Como baixar o projeto
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```bash
+#Clonar o repositório Back-End
+$ git clone https://github.com/ChrisAmantino/projeto-aspas.git
 
-## Further help
+# Abrir o repositório Back-End no Spring e iniciar a aplicação
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+----------------------------------------------------------------------------------------------
+
+# Clonar o repositório Front-End
+$ git clone https://github.com/ChrisAmantino/projeto-aspas-front-end.git
+
+# Entrar no diretório Front-End
+$ cd projeto-aspas
+
+#Instalar as dependências
+$ npm install
+
+# Iniciar o projeto
+$ ng serve
+```
+
+
