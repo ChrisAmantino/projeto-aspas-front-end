@@ -38,7 +38,7 @@ $ git clone https://github.com/ChrisAmantino/projeto-aspas.git
 
 # Abrir o repositório Back-End no Spring e iniciar a aplicação
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 # Clonar o repositório Front-End
 $ git clone https://github.com/ChrisAmantino/projeto-aspas-front-end.git
