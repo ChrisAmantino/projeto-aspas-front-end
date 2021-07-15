@@ -43,8 +43,13 @@ $ git clone https://github.com/ChrisAmantino/projeto-aspas.git
 # Clonar o repositório Front-End
 $ git clone https://github.com/ChrisAmantino/projeto-aspas-front-end.git
 
+# Instalar o node.js caso não possua
+
 # Entrar no diretório Front-End
 $ cd projeto-aspas
+
+#Instalar o angular
+$ npm install -g @angular/cli
 
 #Instalar as dependências
 $ npm install
